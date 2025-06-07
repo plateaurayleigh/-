@@ -3,11 +3,6 @@ name: "打卡"
 #定时触发（北京时间 07:00、08:00、17:00、18:00）
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 23 * * *'  # 北京时间 07:00（UTC+0）
-    - cron: '0 0 * * *'   # 北京时间 08:00（UTC+0）
-    - cron: '0 9 * * *'   # 北京时间 17:00（UTC+0）
-    - cron: '0 10 * * *'  # 北京时间 18:00（UTC+0）
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
